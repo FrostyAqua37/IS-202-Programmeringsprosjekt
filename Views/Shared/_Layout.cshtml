@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Nøsted</title>
+        <link rel="stylesheet" href="~/css/layout.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <nav class="sidebar">
+            <header>
+                <div class="image-text">
+                    <span class="box-icon">
+                    <img src="https://images.finncdn.no/dynamic/640w/2020/11/vertical-5/13/1/061/2cb/70-/25b/7-1/1eb/-bb/01-/dd5/434/8f1/201_1049283660.jpg" alt="logo" />
+                    </span>
+
+                    <div class="text header-text">
+                        <span class="name">Brukernavn</span>
+                        <span class="email">Email</span>
+                    </div>
+                </div>
+            <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="search">
+                    <li class="nav-link">
+                        <i class='bx bx-search icon'></i>
+                        <input type="search" placeholder="Search" />
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Dashboard</a>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Work Schedule</a>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Service Form</a>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Notifications</a>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        </nav>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Nøsted - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
