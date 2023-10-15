@@ -1,8 +1,13 @@
 ﻿body {
+    margin-left: 15%;
 }
 
 .body-text {
     margin-left: 15%;
     font-size: 18px;
     padding-top: 25px
+}
+
+p {
+    margin-left: 15%;
 }
