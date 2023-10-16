@@ -1,0 +1,199 @@
+﻿@model Nøsted.Models.ServiceForm
+
+@{
+    ViewData["Title"] = "Create";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="~/css/ServiceForm/Create.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+    </head>
+    <body>
+        
+    <h1>Create a new Service Form</h1>
+    
+    <article class="ServiceNr">
+        <label for="ServiceNr">ServiceNr</label>
+        <input type="text" id="ServiceNr" name="ServiceNr" placeholder="ServiceNr"/>
+    </article>
+       
+    <article class="OrderNr">
+        <label for="OrderNr">OrderNr</label>
+        <input type="text" id="OrderNr" name="OrderNr" placeholder="OrderNr"/>
+    </article>
+        
+    <article class="Modell">
+        <label for="Modell">Modell</label>
+        <input type="text" id="Modell" name="Modell" placeholder="Modell"/>
+    </article><br />
+
+    <div class="row">
+
+    <article class="Mekanisk">
+        <div>Mekanisk</div>
+        <div>Ok Bør skiftes Defekt</div>
+    </article><br />
+
+    
+     <article class="mekanisk">
+        <label for="Crutch">Sjekk crutch lameller for slitasje</label>
+        <input type="radio" id="Crutch" name="Crutch" value="OK" />
+        <input type="radio" id="Crutch" name="Crutch" value="Bør skiftes"/>
+        <input type="radio" id="Crutch" name="Crutch" value="Defekt"/>
+     </article>
+
+     <article class="mekanisk">
+        <label for="Bremser">Sjekk bremser, bånd og pal </label>
+        <input type="radio" id="Bremser" name="Bremser" value="OK" />
+        <input type="radio" id="Bremser" name="Bremser" value="Bør skiftes"/>
+        <input type="radio" id="Bremser" name="Bremser" value="Defekt"/>
+     </article>
+
+     <article class="mekanisk">
+        <label for="Trommel">Sjekk lager for trommel</label>
+        <input type="radio" id="Trommel" name="Trommel" value="OK" />
+        <input type="radio" id="Trommel" name="Trommel" value="Bør skiftes"/>
+        <input type="radio" id="Trommel" name="Trommel" value="Defekt"/>
+     </article>
+
+     <article class="mekanisk">
+        <label for="PTO">Sjekk PTO og opplagring</label>
+        <input type="radio" id="PTO" name="PTO" value="OK" />
+        <input type="radio" id="PTO" name="PTO" value="Bør skiftes"/>
+        <input type="radio" id="PTO" name="PTO" value="Defekt"/>
+     </article>
+
+     <article class="mekanisk">
+        <label for="kjedestrammer">Sjekk kjedestrammer</label>
+        <input type="radio" id="kjedestrammer" name="kjedestrammer" value="OK" />
+        <input type="radio" id="kjedestrammer" name="kjedestrammer" value="Bør skiftes"/>
+        <input type="radio" id="kjedestrammer" name="kjedestrammer" value="Defekt"/>
+     </article>
+
+    <article class="mekanisk">
+        <label for="wire">Sjekk wire</label>
+        <input type="radio" id="wire" name="wire" value="OK" />
+        <input type="radio" id="wire" name="wire" value="Bør skiftes" />
+        <input type="radio" id="wire" name="wire" value="Defekt" />
+    </article>
+
+    <article class="mekanisk">
+        <label for="pinion">Sjekk pinion lager</label>
+        <input type="radio" id="pinion" name="pinion" value="OK" />
+        <input type="radio" id="pinion" name="pinion" value="Bør skiftes" />
+        <input type="radio" id="pinion" name="pinion" value="Defekt" />
+    </article>  
+
+    <article class="mekanisk">
+        <label for="kile">Sjekk kile på kjedehjul</label>
+        <input type="radio" id="kile" name="kile" value="OK" />
+        <input type="radio" id="kile" name="kile" value="Bør skiftes" />
+        <input type="radio" id="kile" name="kile" value="Defekt" />
+    </article><br />
+
+    <article class="Hydraulisk">
+        <div>Hydraulisk</div>
+    </article><br />
+
+    <article class="hydraulisk">
+        <label for="sylinder">Sjekk hydraulisk sylinder for lekkasje</label>
+        <input type="radio" id="sylinder" name="sylinder" value="OK" />
+        <input type="radio" id="sylider" name="sylinder" value="Bør skiftes" />
+        <input type="radio" id="sylinder" name="sylinder" value="Defekt" />
+    </article>
+    
+    <article class="hydraulisk">
+        <label for="slange">Sjekk slange for skader og lekkasje</label>
+        <input type="radio" id="slange" name="slange" value="OK" />
+        <input type="radio" id="slange" name="slange" value="Bør skiftes" />
+        <input type="radio" id="slange" name="slange" value="Defekt" />
+    </article>
+
+    <article class="hydraulisk">
+        <label for="hydraulikkblokk">Test hydraulikkblokk i testbenk</label>
+        <input type="radio" id="hydraulikkblokk" name="hydraulikkblokk" value="OK" />
+        <input type="radio" id="hydraulikkblokk" name="hydraulikkblokk" value="Bør skiftes" />
+        <input type="radio" id="hydraulikkblokk" name="hydraulikkblokk" value="Defekt" />
+    </article>
+
+    <article class="hydraulisk">
+        <label for="olje">Skift olje i tank</label>
+        <input type="radio" id="olje" name="olje" value="OK" />
+        <input type="radio" id="olje" name="olje" value="Bør skiftes" />
+        <input type="radio" id="olje" name="olje" value="Defekt" />
+    </article>
+  
+    <article class="hydraulisk">
+        <label for="boks">Skift olje på gir boks</label>
+        <input type="radio" id="boks" name="boks" value="OK" />
+        <input type="radio" id="boks" name="boks" value="Bør skiftes" />
+        <input type="radio" id="boks" name="boks" value="Defekt" />
+    </article>
+
+    <article class="hydraulisk">
+        <label for="ringsylinder">Sjekk ringsylinder åpne og skift tetninger</label>
+        <input type="radio" id="ringsylinder" name="ringsylinder" value="OK" />
+        <input type="radio" id="ringsylinder" name="ringsylinder" value="Bør skiftes" />
+        <input type="radio" id="ringsylinder" name="ringsylinder" value="Defekt" />
+    </article>
+
+    <article class="hydraulisk">
+    <label for="bremsesylinder">Sjekk bremse sylinder åpne og skift tetninger</label>
+        <input type="radio" id="bremsesylinder" name="bremsesylinder" value="OK" />
+        <input type="radio" id="bremsesylinder" name="bremsesylinder" value="Bør skiftes" />
+        <input type="radio" id="bremsesylinder" name="bremsesylinder" value="Defekt" />
+    </article><br />
+
+    <article class="Elektro">
+        <div>Elektro</div>
+    </article><br />
+
+    <article class="elektro">
+    <label for="ledningsnett">Sjekk ledningsnett på vinsj</label>
+        <input type="radio" id="ledningsnett" name="ledningsnett" value="OK" />
+        <input type="radio" id="ledningsnett" name="ledningsnett" value="Bør skiftes" />
+        <input type="radio" id="ledningsnett" name="ledningsnett" value="Defekt" />
+    </article>
+
+    <article class="elektro">
+    <label for="radio">Sjekk og test radio</label>
+        <input type="radio" id="radio" name="radio" value="OK" />
+        <input type="radio" id="radio" name="radio" value="Bør skiftes" />
+        <input type="radio" id="radio" name="radio" value="Defekt" />
+    </article>
+
+    <article class="elektro">
+    <label for="knappekasse">Sjekk og testknappekasse</label>
+        <input type="radio" id="knappekasse" name="knappekasse" value="OK" />
+        <input type="radio" id="knappekasse" name="knappekasse" value="Bør skiftes" />
+        <input type="radio" id="knappekasse" name="knappekasse" value="Defekt" />
+    </article>
+
+    <article class="Trykk">
+        <div>Trykk Settinger</div>
+    </article><br />
+
+    <article class="Funksjonstest">
+        <div>Funksjonstest</div>
+    </article><br />
+
+    <article class="Kommentar">
+        <div>Kommentar</div>
+    </article><br />
+
+    <article class="Signatur">
+        <div>Signatur</div>
+    </article><br />
+
+    <article class="Dato">
+        <div>Dato</div>
+    </article><br />
+
+    </div>
+
+    </body>
+
+
+</html>
