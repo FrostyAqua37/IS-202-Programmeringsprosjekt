@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Nøsted.Models;
+using NøstedProsjekt.Models;
 using System.Diagnostics;
 
-namespace Nøsted.Controllers
+namespace NøstedProsjekt.Controllers
 {
     public class HomeController : Controller
     {

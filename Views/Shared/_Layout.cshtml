@@ -1,76 +1,48 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Nøsted</title>
-        <link rel="stylesheet" href="~/css/layout.css" />
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
-    <body>
-        <nav class="sidebar">
-            <header>
-                <div class="image-text">
-                    <span class="box-icon">
-                    <img src="https://images.finncdn.no/dynamic/640w/2020/11/vertical-5/13/1/061/2cb/70-/25b/7-1/1eb/-bb/01-/dd5/434/8f1/201_1049283660.jpg" alt="logo" />
-                    </span>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NøstedProsjekt</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NøstedProsjekt.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Nøsted</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Hjem</a>
+                        </li>
 
-                    <div class="text header-text">
-                        <span class="name">Brukernavn</span>
-                        <span class="email">Email</span>
-                    </div>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="CreateServiceOrder">Service Ordre</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="ServiceOrderOverview">Service Ordre</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Checklist">Sjekkliste</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
                 </div>
-            <i class='bx bx-chevron-right toggle'></i>
-            </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-                <ul class="menu">
-                    <li class="search">
-                        <i class='bx bx-search icon'></i>
-                        <input type="search" placeholder="Search" />
-                    </li>
-                </ul>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-dashboard icon'></i>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Dashboard</a>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-calendar icon'></i>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="WorkSchedule" asp-action="Index">Work Schedule</a>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-book icon'></i>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ServiceForm" asp-action="Index">Service Form</a>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">Notifications</a>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-cog icon'></i>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Settings" asp-action="Index">Settings</a>
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </div>
-
         </nav>
-
-
-
+    </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -79,7 +51,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Nøsted - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - NøstedProsjekt - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

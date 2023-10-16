@@ -1,4 +1,4 @@
-namespace Nøsted.Models
+namespace NøstedProsjekt.Models
 {
     public class ErrorViewModel
     {
