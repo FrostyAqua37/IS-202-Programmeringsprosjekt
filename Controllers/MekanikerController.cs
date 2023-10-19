@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace NøstedProsjekt.Controllers
 {
-    public class EmployeeController : Controller
+    public class MekanikerController : Controller
     {
         public static List<ServiceOrder> serviceOrders = new List<ServiceOrder>();
 
