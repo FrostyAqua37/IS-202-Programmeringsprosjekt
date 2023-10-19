@@ -13,12 +13,12 @@ namespace NøstedProsjekt.Controllers
             return View();
         }
 
-        public IActionResult CreateServiceOrder()
+        public IActionResult Arbeidsdokument()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult CreateServiceOrder(ServiceOrder serviceOrder)
+        public IActionResult Arbeidsdokument(ServiceOrder serviceOrder)
         {
             serviceOrder.Id = MekanikerController.serviceOrders.Count + 1;
             MekanikerController.serviceOrders.Add(serviceOrder);
