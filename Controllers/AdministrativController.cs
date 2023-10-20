@@ -1,28 +1,41 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NøstedProsjekt.Models;
+using NøstedProsjekt.Models; // Add this 'using' directive for WorkDocument
 using System.Collections.Generic;
 
 namespace NøstedProsjekt.Controllers
 {
     public class AdministrativController : Controller
     {
-        private static List<ServiceOrder> serviceOrders = new List<ServiceOrder>();
+        // Use WorkDocument as the model type
+        private static List<WorkDocument> workDocuments = new List<WorkDocument>();
 
-        public IActionResult Index()
+        // Other actions...
+
+        public IActionResult ServiceOrderOverview()
         {
-            return View();
+            // Retrieve your work documents here
+            List<WorkDocument> workDocuments = GetWorkDocuments(); // Implement this method
+            return View(workDocuments);
         }
 
-        public IActionResult Arbeidsdokument()
-        {
-            return View();
-        }
         [HttpPost]
-        public IActionResult Arbeidsdokument(ServiceOrder serviceOrder)
+        public IActionResult CreateServiceOrder(WorkDocument workDocument)
         {
-            serviceOrder.Id = MekanikerController.serviceOrders.Count + 1;
-            MekanikerController.serviceOrders.Add(serviceOrder);
-            return RedirectToAction("Index", "Customer");
+            // Assign a new ID to the work document
+            workDocument.OrderId = workDocuments.Count + 1;
+
+            // Add the work document to the list
+            workDocuments.Add(workDocument);
+
+            // Redirect to the makeserviceorder view
+            return RedirectToAction("makeserviceorder", new { orderId = workDocument.OrderId });
         }
+
+        private List<WorkDocument> GetWorkDocuments()
+        {
+            // You can return the list of work documents from your private field
+            return workDocuments;
+        }
+
     }
 }
