@@ -17,11 +17,25 @@ namespace NøstedProsjekt.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult CreateServiceOrder(ServiceOrder serviceOrder)
         {
-            serviceOrder.Id = EmployeeController.serviceOrders.Count + 1;
-            EmployeeController.serviceOrders.Add(serviceOrder);
+            serviceOrder.Id = serviceOrders.Count + 1;
+            serviceOrders.Add(serviceOrder);
+            return RedirectToAction("Index", "Customer");
+        }
+
+        public IActionResult RegisterOrder()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisterOrder(ServiceOrder serviceOrder)
+        {
+            serviceOrder.Id = serviceOrders.Count + 1;
+            serviceOrders.Add(serviceOrder);
             return RedirectToAction("Index", "Customer");
         }
     }
