@@ -39,3 +39,22 @@ table {
     bottom: 0;
     border-bottom: 2px solid black;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+th, td {
+    padding: 2px;
+    margin: 0;
+}
+
+th {
+    font-size: 15px;
+}
