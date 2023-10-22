@@ -1,18 +1,39 @@
 ﻿@model List<NøstedProsjekt.Models.ServiceOrder>
 
-<h2>Service Ordre Oversikt</h2>
+<h1>Service Ordre Oversikt</h1>
 
 <table border="1">
     <thead>
         <tr>
-            <th>Service Ordre ID</th>
+            <th>
+                Service Ordre ID
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Produktnavn
+            </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var order in Model)
         {
             <tr>
-                <td>@order.Id</td>
+                <td>
+                    @order.Id
+                </td>
+                <td>
+                    @Html.DisplayFor(modelOrder => order.EmailAddress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelOrder => order.ProductName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@order.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@order.Id">Details</a>
+                    <a asp-action="Delete" asp-route-id="@order.Id">Delete</a>
+                </td>
             </tr>
         }
     </tbody>

@@ -3,9 +3,11 @@
     public class WorkDocument
     {
         //Arbeidsdokument
-        public int OrderId { get; set; }
+        public int OrdezrId { get; set; }
         public string ProductType { get; set; } = string.Empty;
         public string Comment { get; set; } = string.Empty;
+
+        public string Order { get; set; } = string.Empty;
         public string Week { get; set; } = string.Empty;
         public string Inquiry { get; set; } = string.Empty;
         public bool CaseCompleted { get; set; }

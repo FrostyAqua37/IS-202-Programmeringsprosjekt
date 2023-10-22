@@ -19,11 +19,22 @@ namespace NøstedProsjekt.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateServiceOrder(ServiceOrder serviceOrder)
+        public IActionResult CreateServiceOrder(ServiceOrder serviceOrder, string FirstName, string LastName, string PhoneNumber, string EmailAddress, string ProductName, string ProductType, string PreferredTimePeriod, string comment)
         {
             serviceOrder.Id = serviceOrders.Count + 1;
             serviceOrders.Add(serviceOrder);
-            return RedirectToAction("Index", "Customer");
+
+            ServiceOrder serviceorder1 = new ServiceOrder();
+            serviceorder1.FirstName = FirstName;
+            serviceorder1.LastName = LastName;
+            serviceorder1.PhoneNumber = PhoneNumber;
+            serviceorder1.EmailAddress = EmailAddress;
+            serviceorder1.ProductName = ProductName;
+            serviceorder1.ProductType = ProductType;
+            serviceorder1.PreferredTimePeriod = PreferredTimePeriod;
+            serviceorder1.Comment = comment;
+
+            return View(serviceorder1);
         }
 
         public IActionResult RegisterOrder()
