@@ -36,6 +36,5 @@ namespace NøstedProsjekt.Controllers
 
             return RedirectToAction("SomeOtherAction");
         }
-
     }
 }

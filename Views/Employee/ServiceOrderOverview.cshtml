@@ -2,7 +2,7 @@
 
 <h1>Service Ordre Oversikt</h1>
 
-<table border="1">
+<table class="table">
     <thead>
         <tr>
             <th>
@@ -24,10 +24,10 @@
                     @order.Id
                 </td>
                 <td>
-                    @Html.DisplayFor(modelOrder => order.EmailAddress)
+                    @order.EmailAddress
                 </td>
                 <td>
-                    @Html.DisplayFor(modelOrder => order.ProductName)
+                    @order.ProductName
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@order.Id">Edit</a>

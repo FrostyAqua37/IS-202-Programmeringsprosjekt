@@ -1,16 +1,18 @@
-﻿namespace NøstedProsjekt.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NøstedProsjekt.Models
 {
     public class WorkDocument
     {
         //Arbeidsdokument
-        public int OrdezrId { get; set; }
+        [Key] 
+        public int OrderId { get; set; }
         public string ProductType { get; set; } = string.Empty;
         public string Comment { get; set; } = string.Empty;
-
         public string Order { get; set; } = string.Empty;
         public string Week { get; set; } = string.Empty;
         public string Inquiry { get; set; } = string.Empty;
-        public bool CaseCompleted { get; set; }
+        public bool CaseCompleted { get; set; } 
         public string CustomerInfo { get; set; } = string.Empty;
         public string PlannedDelivery { get; set; } = string.Empty;
         public DateTime? ProductReceivedDate { get; set; }

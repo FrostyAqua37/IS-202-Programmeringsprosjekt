@@ -1,7 +1,10 @@
-﻿namespace NøstedProsjekt.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NøstedProsjekt.Models
 {
     public class ServiceOrder
     {
+        [Key]
         public int Id { get; set; }
 
         // Customer Information

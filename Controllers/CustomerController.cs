@@ -37,6 +37,28 @@ namespace NøstedProsjekt.Controllers
             return View(serviceorder1);
         }
 
+        [HttpPost]
+        public IActionResult CreateWorkDocument(string ProductType, string Comment, string Order, string Week, string Inquiry, bool CaseCompleted, string CustomerInfo, string PlannedDelivery, DateTime? ProductReceivedDate, DateTime? AgreedCompletionDate, DateTime? ServiceCompletedDate, string ServiceHours, bool HasOrderNumber, bool HasServiceForm)
+        {
+            WorkDocument workDocument = new WorkDocument();
+            workDocument.ProductType = ProductType;
+            workDocument.Comment = Comment;
+            workDocument.Order = Order;
+            workDocument.Week = Week;
+            workDocument.Inquiry = Inquiry;
+            workDocument.CaseCompleted = CaseCompleted;
+            workDocument.CustomerInfo = CustomerInfo;
+            workDocument.PlannedDelivery = PlannedDelivery;
+            workDocument.ProductReceivedDate = ProductReceivedDate;
+            workDocument.AgreedCompletionDate = AgreedCompletionDate;
+            workDocument.ServiceCompletedDate = ServiceCompletedDate;
+            workDocument.ServiceHours = ServiceHours;
+            workDocument.HasOrderNumber = HasOrderNumber;
+            workDocument.HasServiceForm = HasServiceForm;
+
+            return View();
+        }
+
         public IActionResult RegisterOrder()
         {
             return View();
