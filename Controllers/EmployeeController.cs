@@ -34,7 +34,7 @@ namespace NøstedProsjekt.Controllers
             // Save the checklist items.
             // ...
 
-            return RedirectToAction("SomeOtherAction");
+            return RedirectToAction("ServiceOrderOverview");
         }
 
     }
