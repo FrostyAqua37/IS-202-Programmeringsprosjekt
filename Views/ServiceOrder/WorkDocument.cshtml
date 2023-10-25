@@ -6,6 +6,8 @@
 
 <h1>Work Document</h1>
 
+@Html.AntiForgeryToken()
+
 <form asp-action="CreateWorkDocument" method="post">
     <label asp-for="Week">Booket service til Uke:</label>
     <input asp-for="Week" class="form-control" placeholder="Skriv inn Uke her" />

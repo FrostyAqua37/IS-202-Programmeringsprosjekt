@@ -6,6 +6,9 @@
 
 <h1> Create a serviceform</h1>
 
+@Html.AntiForgeryToken()
+
+
 <form asp-action="CreateServiceform" method="post">
     <label asp-for="FirstName">First Name</label>
     <input asp-for="FirstName" class="form-control" placeholder="First Name" />
