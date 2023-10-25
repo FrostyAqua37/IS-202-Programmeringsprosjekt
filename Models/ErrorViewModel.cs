@@ -1,4 +1,4 @@
-namespace NøstedProsjekt.Models
+namespace NestedProsjekt.Models
 {
     public class ErrorViewModel
     {

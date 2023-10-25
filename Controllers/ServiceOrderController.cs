@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NøstedProsjekt.Models;
+using NestedProsjekt.Models;
 using System.Collections.Generic;
 
-namespace Nøsted.Controllers
+namespace Nested.Controllers
 {
     public class ServiceOrderController : Controller
     {

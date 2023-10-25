@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace NøstedProsjekt.Models
+namespace NestedProsjekt.Models
 {
     public class WorkDocument
     {

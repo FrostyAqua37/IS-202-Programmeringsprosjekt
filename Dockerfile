@@ -3,23 +3,22 @@
 #Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
 #For more information, please see https://aka.ms/containercompat
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+
+# First stage is to build the project
+FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
+WORKDIR /src
+# Copies all the files from prosjektarbeid folder
+COPY . .
+RUN dotnet restore NestedProsjekt.csproj
+# Builds and makes the project publishable
+RUN dotnet publish "NestedProsjekt.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Runtime image
+# Multistage to make the container lighter
+FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
-
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
-COPY ["NøstedProsjekt/NøstedProsjekt.csproj", "NøstedProsjekt/"]
-RUN dotnet restore "NøstedProsjekt/NøstedProsjekt.csproj"
-COPY . .
-WORKDIR "/src/NøstedProsjekt"
-RUN dotnet build "NøstedProsjekt.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "NøstedProsjekt.csproj" -c Release -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "NøstedProsjekt.dll"]
+# Copies the files that was build from the previous build stage
+COPY --from=build /app/publish .
+ENTRYPOINT ["dotnet", "NestedProsjekt.dll"]
