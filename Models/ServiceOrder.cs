@@ -1,21 +1,20 @@
-﻿namespace NøstedProsjekt.Models
-{
-    public class ServiceOrder
-    {
-        public int Id { get; set; }
+using System.ComponentModel.DataAnnotations;
 
-        // Customer Information
+namespace NøstedProsjekt.Models
+{
+    public class ServiceOrder   
+    {
+        public ServiceOrder()
+        {
+        }
+        [Key] public int OrderId { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
-        public string PhoneNumber { get; set; } = string.Empty;
-        public string EmailAddress { get; set; } = string.Empty;
-
-        // Product Details
-        public string ProductName { get; set; } = string.Empty;
+        public string PhoneNumber {  get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string ProductName { get; set; } = string.Empty;    
         public string ProductType { get; set; } = string.Empty;
-
-        // Service Details
         public string PreferredTimePeriod { get; set; } = string.Empty;
-        public string Comment { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty; 
     }
 }
