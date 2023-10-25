@@ -51,7 +51,7 @@ namespace Nøsted.Controllers
         public IActionResult CreateWorkDocument(string ProductType, string Comment, string Order, string Week, string Inquiry, bool CaseCompleted, string CustomerInfo, DateTime? PlannedDelivery, DateTime? ProductReceivedDate, DateTime? AgreedCompletionDate, DateTime? ServiceCompletedDate, string ServiceHours, bool HasOrderNumber, bool HasServiceForm)
         {
             WorkDocument workDocument = new WorkDocument();
-            workDocument.ProductType = ProductType;
+            workDocument.ProductType = ProductType; 
             workDocument.Comment = Comment;
             workDocument.Order = Order;
             workDocument.Week = Week;
