@@ -11,6 +11,9 @@ foreach(var jobGroup in Model.JobGroups)
         <li>
             @group <input type="checkbox">
         </li>
+        <li>
+            @Html.DisplayFor(model => model.CustomerCity)
+        </li>
     
     }
     </ul>

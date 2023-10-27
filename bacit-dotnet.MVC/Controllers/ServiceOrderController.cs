@@ -25,7 +25,7 @@ namespace bacit_dotnet.MVC.Controllers
                 IsAdministrator=false,
                 JobGroups = new List<ServiceOrderJobGroupModel> { 
                     new ServiceOrderJobGroupModel {Name ="Mekanisk", Jobs=new List<string>{"Skru på ting", "Bytte slureflapp"} },
-                    new ServiceOrderJobGroupModel{ Name="Elektrisk", Jobs=new List<string>{"Sikringer","Greier" } },
+                    new ServiceOrderJobGroupModel {Name="Elektrisk", Jobs=new List<string>{"Sikringer","Greier" } },
                     
                 
                 },
@@ -48,5 +48,6 @@ namespace bacit_dotnet.MVC.Controllers
             }
             return View("Index", model);
         }
+
     }
 }
